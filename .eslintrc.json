@@ -16,6 +16,9 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "quotes": ["error", "single"],
-    "no-undef": "warn"
+    "no-undef": "warn",
+    "react/function-component-definition": "off",
+    "arrow-body-style": "off",
+    "import/prefer-default-export": "off"
   }
 }
