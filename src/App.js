@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import { CreatePage } from './CreatePage/CreatePage';
-import { EditPage } from './EditPage/EditPage';
-import './App.css';
+import CreatePage from './CreatePage/CreatePage';
+import EditPage from './EditPage/EditPage';
+import style from './App.module.css';
+import Content from './Content/Content';
 
 const App = () => {
   return (
@@ -14,7 +15,18 @@ const App = () => {
 };
 
 const Main = () => {
-  return <div>Projects</div>;
+  return (
+    <div className={style.appContainer}>
+      <div className={style.appContentContainer}>
+        <div className={style.appTitle}>
+          <h1>Projects manager</h1>
+        </div>
+        <div>
+          <Content />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default App;
