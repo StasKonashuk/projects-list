@@ -1,23 +1,39 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import style from './Content.module.css';
+import Task from './Task';
 
-const Project = () => {
+const Project = ({
+  companyName,
+  email,
+  projectAuthor,
+  projectDescription,
+  projectLanguage,
+  projectName,
+  projectTitle,
+  projectVSC,
+  projectTasks
+}) => {
+  const task = projectTasks.map(t => (
+    <Task key={t.task_id} taskName={t.task_name} taskStatus={t.task_status} />
+  ));
   return (
-    <div className={style.projectContainer}>
-      <h1>Name of project</h1>
-      <p>Project title</p>
-      <p>Project text</p>
-      <p>Project author</p>
-      <p>Author offer</p>
-      <p>Language of project</p>
-      <p>Name of company</p>
-      <p>email</p>
-      <p>Soauthors</p>
-      <p>Number of soathors</p>
-      <p>Surname soathors</p>
-      <p>Task status</p>
-      <p>Task name</p>
-    </div>
+    <tr className={style.projectContainer}>
+      <th>{projectName}</th>
+      <th>{projectTitle}</th>
+      <th>{projectAuthor}</th>
+      <th>{projectLanguage}</th>
+      <th>{projectVSC}</th>
+      <th>{companyName}</th>
+      <th>{email}</th>
+      <th>{projectDescription}</th>
+      <th>{task}</th>
+      <th>
+        <NavLink className={style.editButton} to="/edit">
+          Edit
+        </NavLink>
+      </th>
+    </tr>
   );
 };
 
