@@ -69,3 +69,9 @@ export const projectsApi = createApi({
     })
   })
 });
+
+export const {
+  useGetProjectsQuery,
+  useAddProjectMutation,
+  useEditProjectMutation
+} = projectsApi;
