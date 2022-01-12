@@ -1,0 +1,57 @@
+.createFormContainer {
+  background-color: white;
+  border-radius: 15px;
+  width: 50%;
+  margin: 150px auto;
+  padding: 70px;
+}
+.titleCreateForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submitButtonContainer {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radioButtonContainer {
+  display: flex;
+  flex-direction: row;
+}
+.projectsTaskInputContainer {
+  margin-top: 30px;
+  border: solid 1px rgb(173, 172, 172);
+  padding: 15px;
+  border-radius: 10px;
+}
+.projectsTaskInputContent {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.taskInputContainer {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+.taskFieldTitle {
+  margin-right: 20px;
+}
+.addTaskButton {
+  position: relative;
+  bottom: 73px;
+  left: 150px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.selectField {
+  height: 35px;
+  font-size: 17px;
+}
+.selectError {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: red;
+}
