@@ -1,9 +1,9 @@
 .projectsContainer {
   display: flex;
-  flex-direction: row;
-  border: 2px solid;
+  flex-direction: column;
   border-radius: 5px;
   margin: 50px 70px;
+  align-items: center;
 }
 .projectstList {
   display: flex;
@@ -11,4 +11,68 @@
 }
 .projectContainer {
   margin-right: 30px;
+}
+.contentTable {
+  border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 1.1em;
+  min-width: 1400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.contentTable thead tr {
+  background-color: #009879;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 20px;
+  font-weight: bold;
+}
+.contentTable th,
+.contentTable td {
+  padding: 12px 15px;
+  text-align: top;
+}
+.contentTable tbody > tr > th {
+  border-bottom: 1px solid #ddd;
+}
+.contentTable tbody > tr:nth-last-of-type(even) {
+  background-color: #f3f3f3;
+}
+.contentTable tbody > tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.createProjectButton {
+  text-align: center;
+  width: 30%;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #009879;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.createProjectButton:hover {
+  background-color: #046b56;
+}
+.editButton {
+  border: 1px solid rgb(212, 0, 0);
+  border-radius: 5px;
+  background: rgb(212, 0, 0);
+  padding: 7px 15px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Domine', serif;
+  cursor: pointer;
+  margin: auto;
+  transition: all 0.2s ease;
+}
+.editButton:hover {
+  background: rgb(165, 1, 1);
 }
