@@ -14,8 +14,9 @@
   flex-direction: column;
   margin-top: 150px;
   background-color: white;
-  width: 80%;
+  width: 95%;
   border-radius: 50px;
+  margin-bottom: 100px;
 }
 .appTitle {
   display: flex;
