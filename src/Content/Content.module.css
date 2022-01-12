@@ -1,0 +1,14 @@
+.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid;
+  border-radius: 5px;
+  margin: 50px 70px;
+}
+.projectstList {
+  display: flex;
+  flex-direction: row;
+}
+.projectContainer {
+  margin-right: 30px;
+}
