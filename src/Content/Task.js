@@ -3,9 +3,13 @@ import style from './Content.module.css';
 
 const Task = ({ taskName, taskStatus }) => {
   return (
-    <div>
-      <p>{taskName}</p>
-      <p>{taskStatus}</p>
+    <div className={style.TaskContainer}>
+      <div>
+        <p>Name: {taskName},</p>
+      </div>
+      <div>
+        <p>Status: {taskStatus};</p>
+      </div>
     </div>
   );
 };
