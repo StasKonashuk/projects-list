@@ -6,7 +6,7 @@ import { getProjects } from '../redux/projects/projects-reducer';
 import style from './Content.module.css';
 
 const Table = () => {
-  const dispaatch = useDispatch();
+  const dispatch = useDispatch();
 
   const { data, isSuccess } = useGetProjectsQuery();
 
@@ -14,12 +14,12 @@ const Table = () => {
     try {
       if (isSuccess) {
         const projects = await data;
-        dispaatch(getProjects({ projects }));
+        dispatch(getProjects({ projects }));
       }
     } catch (error) {
       console.log(error);
     }
-  });
+  }, [data]);
 
   const projects = useSelector(state => state.projects.projects);
 
