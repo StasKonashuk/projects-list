@@ -10,10 +10,10 @@ const Table = () => {
 
   const { data, isSuccess } = useGetProjectsQuery();
 
-  useEffect(async () => {
+  useEffect(() => {
     try {
       if (isSuccess) {
-        const projects = await data;
+        const projects = data;
         dispatch(getProjects({ projects }));
       }
     } catch (error) {
@@ -26,6 +26,7 @@ const Table = () => {
   const project = projects.map(p => (
     <Project
       key={p.project_id}
+      projectId={p.project_id}
       companyName={p.company_name}
       email={p.email}
       projectAuthor={p.project_author}
