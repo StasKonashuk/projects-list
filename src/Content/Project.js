@@ -1,9 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { setProjectId } from '../redux/projects/projects-reducer';
 import style from './Content.module.css';
 import Task from './Task';
 
 const Project = ({
+  projectId,
   companyName,
   email,
   projectAuthor,
@@ -14,6 +17,7 @@ const Project = ({
   projectVSC,
   projectTasks
 }) => {
+  const dispatch = useDispatch();
   const task = projectTasks.map(t => (
     <Task key={t.task_id} taskName={t.task_name} taskStatus={t.task_status} />
   ));
@@ -29,7 +33,11 @@ const Project = ({
       <th>{projectDescription}</th>
       <th>{task}</th>
       <th>
-        <NavLink className={style.editButton} to="/edit">
+        <NavLink
+          onClick={() => dispatch(setProjectId(projectId))}
+          className={style.editButton}
+          to="/edit"
+        >
           Edit
         </NavLink>
       </th>
