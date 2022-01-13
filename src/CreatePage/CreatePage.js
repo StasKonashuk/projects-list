@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useAddProjectMutation } from '../api/projectsApi';
 import {
   createProject,
-  refreshMessage
+  refreshCreateProjectMessage
 } from '../redux/projects/projects-reducer';
 import style from './CreatePage.module.css';
 
@@ -17,10 +17,10 @@ const CreatePage = () => {
   const [addProject] = useAddProjectMutation();
 
   useEffect(() => {
-    dispatch(refreshMessage());
+    dispatch(refreshCreateProjectMessage());
   }, []);
 
-  const succesMsg = useSelector(state => state.projects.message);
+  const succesMsg = useSelector(state => state.projects.createProjectMessage);
 
   return (
     <div className={style.createFormContainer}>
@@ -46,7 +46,6 @@ const CreatePage = () => {
             companyName: '',
             projectTasks: [
               {
-                id: Math.floor(Math.random() * (1000 - 1 + 1)) + 1,
                 name: '',
                 status: ''
               }
