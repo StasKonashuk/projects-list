@@ -76,7 +76,11 @@
 .editButton:hover {
   background: rgb(165, 1, 1);
 }
-.TaskContainer {
+.taskContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.taskItem {
+  margin-right: 15px;
 }
