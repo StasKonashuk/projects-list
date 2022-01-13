@@ -4,22 +4,43 @@ const projectsSlice = createSlice({
   name: 'projects',
   initialState: {
     projects: [],
-    message: ''
+    createProjectMessage: '',
+    editProjectMessage: '',
+    projectId: null
   },
   reducers: {
     getProjects(state, action) {
       state.projects = action.payload.projects;
     },
     createProject(state, action) {
-      state.message = action.payload;
+      state.createProjectMessage = action.payload;
     },
-    refreshMessage(state) {
-      state.message = null;
+    editProject(state, action) {
+      state.editProjectMessage = action.payload;
+    },
+    refreshCreateProjectMessage(state) {
+      state.createProjectMessage = null;
+    },
+    refreshEditProjectMessage(state) {
+      state.editProjectMessage = null;
+    },
+    setProjectId(state, action) {
+      state.projectId = action.payload;
+    },
+    removeProjectId(state) {
+      state.projectId = null;
     }
   }
 });
 
-export const { getProjects, createProject, refreshMessage } =
-  projectsSlice.actions;
+export const {
+  getProjects,
+  createProject,
+  editProject,
+  refreshCreateProjectMessage,
+  refreshEditProjectMessage,
+  setProjectId,
+  removeProjectId
+} = projectsSlice.actions;
 
 export default projectsSlice.reducer;
