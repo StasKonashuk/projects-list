@@ -3,15 +3,23 @@ import { createSlice } from '@reduxjs/toolkit';
 const projectsSlice = createSlice({
   name: 'projects',
   initialState: {
-    projects: []
+    projects: [],
+    message: ''
   },
   reducers: {
     getProjects(state, action) {
       state.projects = action.payload.projects;
+    },
+    createProject(state, action) {
+      state.message = action.payload;
+    },
+    refreshMessage(state) {
+      state.message = null;
     }
   }
 });
 
-export const { getProjects } = projectsSlice.actions;
+export const { getProjects, createProject, refreshMessage } =
+  projectsSlice.actions;
 
 export default projectsSlice.reducer;
