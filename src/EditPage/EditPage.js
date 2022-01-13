@@ -29,8 +29,6 @@ const EditPage = () => {
     )
   );
 
-  console.log(project);
-
   return (
     <div className={style.editFormContainer}>
       <div className={style.titleEditForm}>
@@ -101,7 +99,7 @@ const EditPage = () => {
                 status: string()
                   .required('Task Status is needed')
                   .min(3, 'Task Status needs to be at least 3 character')
-                  .max(10, 'Task Status is too long')
+                  .max(12, 'Task Status is too long')
               })
             )
           })}
