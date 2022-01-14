@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Form, Formik, Field, FieldArray } from 'formik';
 import { NavLink } from 'react-router-dom';
-import { TextField } from 'formik-mui';
+import { TextField, Select } from 'formik-mui';
 import { object, string, array } from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { useAddProjectMutation } from '../api/projectsApi';
@@ -151,9 +151,9 @@ const CreatePage = () => {
                 <div>
                   <h3>Select Version Control System:</h3>
                   <Field
-                    as="select"
                     name="projectVersionSystemControl"
                     className={style.selectField}
+                    as="select"
                   >
                     <option name="projectVersionSystemControl" value="">
                       Select a Version Control System

@@ -30,13 +30,22 @@
   flex-direction: row;
   margin-right: 20px;
 }
+.selectBox {
+  border-radius: 4px;
+  border: 1px solid #aaaaaa;
+}
 .selectField {
-  height: 35px;
+  border-radius: 5px;
+  width: 310px;
+  padding: 10px;
   font-size: 17px;
+  cursor: pointer;
+  outline: none;
 }
 .selectError {
   margin-top: 10px;
   margin-bottom: 10px;
+
   color: red;
 }
 .successCreateProjectMessage {
