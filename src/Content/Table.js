@@ -8,7 +8,7 @@ import style from './Content.module.css';
 const Table = () => {
   const dispatch = useDispatch();
 
-  const { data, isSuccess } = useGetProjectsQuery();
+  const { data = [], isSuccess } = useGetProjectsQuery();
 
   useEffect(() => {
     try {
@@ -21,9 +21,7 @@ const Table = () => {
     }
   }, [data]);
 
-  const projects = useSelector(state => state.projects.projects);
-
-  const project = projects.map(p => (
+  const project = data.map((p) => (
     <Project
       key={p.project_id}
       projectId={p.project_id}
