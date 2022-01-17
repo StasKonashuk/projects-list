@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import CreatePage from './CreatePage/CreatePage';
+import EditPage from './EditPage/EditPage';
+import style from './App.module.css';
+import Content from './Content/Content';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routes>
+      <Route path="/projects-list" element={<Navigate to="/" />} />
+      <Route path="/" element={<Main />} />
+      <Route path="/create" element={<CreatePage />} />
+      <Route path="/edit" element={<EditPage />} />
+    </Routes>
+  );
+};
+
+const Main = () => {
+  return (
+    <div className={style.appContainer}>
+      <div className={style.appContentContainer}>
+        <div className={style.appTitle}>
+          <h1>Projects manager</h1>
+        </div>
+        <div>
+          <Content />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

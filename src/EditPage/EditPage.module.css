@@ -1,0 +1,94 @@
+.editFormContainer {
+  background-color: white;
+  border-radius: 15px;
+  width: 50%;
+  margin: 150px auto;
+  padding: 70px;
+}
+.titleEditForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submitButtonContainer {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.submitButton {
+  margin-top: 70px;
+  margin-right: 30px;
+  height: 40px;
+}
+.radioButtonContainer {
+  display: flex;
+  flex-direction: row;
+}
+.taskInputContainer {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+.selectField {
+  height: 35px;
+  font-size: 17px;
+}
+.selectError {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: red;
+}
+.successEditProjectMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  height: 95px;
+}
+.backToProjectsButton {
+  border-radius: 5px;
+  color: rgb(61, 80, 248);
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Domine', serif;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 15px;
+  transition: all 0.2s ease;
+}
+.backToProjectsButton:hover {
+  color: black;
+}
+.projectTasksContainer {
+  display: flex;
+  flex-direction: row;
+}
+.projectTaskInputContainer {
+  margin-top: 15px;
+  margin-right: 30px;
+}
+.submitButton {
+  border-radius: 5px;
+  border: 1px solid rgb(0, 67, 250);
+  padding: 10px;
+  width: 150px;
+  color: rgb(0, 67, 250);
+  background: none;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Domine', serif;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: all 0.2s ease;
+}
+.submitButton:hover {
+  background: rgb(0, 67, 250);
+  color: white;
+}
